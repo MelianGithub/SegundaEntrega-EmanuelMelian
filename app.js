@@ -76,22 +76,22 @@ const productos = [
         precio: 14000,
         stock: 0
     }
-]
-function buscarStock(){
- let productoElegido = prompt("Ingrese marca o modelo que desee:");
+];
 
- const buscar = productos.filter(producto => {
-    return productoElegido.toLocaleLowerCase() === producto.marca.toLocaleLowerCase();
+let productoElegido = prompt("Ingrese marca o modelo que desee:");
+
+const buscar = productos.filter(producto => {
+    return producto.marca.toLocaleLowerCase() == productoElegido.toLocaleLowerCase();
 });
-if(productoElegido === buscar ){
+
+if (buscar.value === true) {
     console.log(buscar);
-}else{
-    console.log("no hay chance");
-}
+} else {
+    alert("no hay chance");
 }
 
 
-buscarStock();
+// buscarStock();
 
 
 // -----------------------------------------------------
@@ -103,4 +103,4 @@ buscarStock();
 //     return productoElegido.toLocaleLowerCase() === producto.marca.toLocaleLowerCase();
 // });
 
-// ---------------------------------------
+// // ---------------------------------------
