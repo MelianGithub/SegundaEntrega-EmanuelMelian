@@ -81,10 +81,10 @@ const productos = [
 let productoElegido = prompt("Ingrese marca o modelo que desee:");
 
 const buscar = productos.filter(producto => {
-    return producto.marca.toLocaleLowerCase() == productoElegido.toLocaleLowerCase();
+    return producto.marca.toLocaleLowerCase() === productoElegido.toLocaleLowerCase();
 });
 
-if (buscar.value === true) {
+if (buscar.length > 0) {
     console.log(buscar);
 } else {
     alert("no hay chance");
